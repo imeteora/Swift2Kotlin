@@ -14,8 +14,18 @@ class Token: Equatable {
         init(_ value: Swift.String) { self.value = value }
     }
     
+    class KeyValue: Token {
+        let key: Swift.String
+        let value: Swift.String
+        init(_ key: Swift.String, _ value: Swift.String) {
+            self.key = key
+            self.value = value
+        }
+    }
+    
     static func symbol(_ s: Swift.String) -> Symbol { return Symbol(s) }
     static func string(_ s: Swift.String) -> String { return String(s) }
+    static func keyValue(_ k: Swift.String, _ v: Swift.String) -> KeyValue { return KeyValue(k, v) }
     
     func toString() -> Swift.String {
         switch self {
@@ -27,9 +37,15 @@ class Token: Equatable {
             return token.value
         case let token as Token.Symbol:
             return token.value
+        case let token as Token.KeyValue:
+            return "\(token.key)=\(token.value)"
         default:
             fatalError()
         }
+    }
+    
+    private func quoteIfNecessary() {
+        
     }
 }
 
@@ -39,6 +55,9 @@ func ==(lhs: Token, rhs: Token) -> Bool {
     }
     if let lhs = lhs as? Token.Symbol, let rhs = rhs as? Token.Symbol {
         return lhs.value == rhs.value
+    }
+    if let lhs = lhs as? Token.KeyValue, let rhs = rhs as? Token.KeyValue {
+        return lhs.key == rhs.key && lhs.value == rhs.value
     }
     return lhs === rhs
 }
@@ -70,8 +89,12 @@ class Tokenizer {
         }
         
         func getUntil(_ c: Character) -> String {
+            return getUntil() { char in char == c }
+        }
+        
+        func getUntil(closure: (Character) -> Bool) -> String {
             var result = ""
-            while nextChar()! != c {
+            while !closure(nextChar()!) {
                 result.append(getChar()!)
             }
             return result
@@ -79,17 +102,23 @@ class Tokenizer {
         
         func getUntilBlank() -> String { return getUntil(" ") }
         
-        func skipNonWhiteAndSingleQuotedText() {
-            while let char = nextChar() {
-                if char == "'" {
-                    _ = getChar()
-                    _ = getUntil("'")
-                } else if char == "(" {
-                    _ = getChar()
-                    _ = getUntil(")")
-                } else if char == " " || char == ")" { return }
+        func getBalanced() -> String {
+            if nextChar() == "'" {
                 _ = getChar()
+                let result = getUntil("'")
+                _ = getChar()
+                return result
             }
+            var result = ""
+            while let char = nextChar() {
+                if char == "(" {
+                    result.append(getChar()!)
+                    result.append(getUntil(")"))
+                    result.append(getChar()!)
+                } else if char == " " || char == ")" { return result }
+                result.append(getChar()!)
+            }
+            return result
         }
         
         while let char = skipWhiteSpace() {
@@ -97,7 +126,6 @@ class Tokenizer {
             case "(":
                 _ = getChar()
                 tokens.append(Token.leftParen)
-                tokens.append(Token.symbol(getUntilBlank()))
             case ")":
                 _ = getChar()
                 tokens.append(Token.rightParen)
@@ -105,8 +133,19 @@ class Tokenizer {
                 _ = getChar()
                 tokens.append(Token.string(getUntil("\"")));
                 _ = getChar()
+            case "'":
+                _ = getChar()
+                tokens.append(Token.string(getUntil("'")));
+                _ = getChar()
             default:
-                _ = skipNonWhiteAndSingleQuotedText()
+                let key = getUntil() { c in c == "=" || c == " " || c == ")" }
+                if nextChar()! == "=" {
+                    _ = getChar()
+                    let value = getBalanced()
+                    tokens.append(Token.keyValue(key, value))
+                } else {
+                    tokens.append(Token.symbol(key))
+                }
             }
         }
         

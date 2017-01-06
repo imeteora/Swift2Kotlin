@@ -3,8 +3,8 @@
 use_frameworks!
 
 def testing_pods
-    pod 'Quick'
-    pod 'Nimble'
+    pod 'Quick', '1.0.0'
+    pod 'Nimble', '5.1.1'
 end
 
 target 'Swift2KotlinTests' do

@@ -1,8 +1,12 @@
 class Converter {
     var tokenizer = Tokenizer()
+    var parser = Parser()
+    var generator = Generator()
     
     func convertToKotlin(_ swiftFilename: String) -> String {
         let output = Shell.runToStderr("swiftc", "-dump-ast", swiftFilename)
-        return tokenizer.tokenize(output).map {token in token.toString() }.joined(separator: " ")
+        let tokens = tokenizer.tokenize(output)
+        let ast = parser.parse(tokens)
+        return generator.generate(ast)
     }
 }
