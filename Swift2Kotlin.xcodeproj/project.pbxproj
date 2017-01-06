@@ -7,7 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		269E1BB58EA9BCDDFC9AC7B4 /* Pods_Swift2KotlinTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 481B7CECA759C7DECD3531EC /* Pods_Swift2KotlinTests.framework */; };
+		906F3F917B84EA295031129E /* Pods_Swift2KotlinUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEF2FBEDC7AC86304C3331BC /* Pods_Swift2KotlinUITests.framework */; };
+		AE1CF2FF1E1EFFD000A29D79 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CF2FE1E1EFFD000A29D79 /* Converter.swift */; };
+		AE1CF3021E1F0FB800A29D79 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CF2FE1E1EFFD000A29D79 /* Converter.swift */; };
+		AE1CF3041E1F100C00A29D79 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CF3031E1F100C00A29D79 /* Shell.swift */; };
+		AE1CF3051E1F106900A29D79 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CF3031E1F100C00A29D79 /* Shell.swift */; };
+		AE1CF3061E1F106A00A29D79 /* Shell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE1CF3031E1F100C00A29D79 /* Shell.swift */; };
+		AE53918B1E1F191C00F025E3 /* Eval.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53918A1E1F191C00F025E3 /* Eval.swift */; };
+		AE53918D1E1F195100F025E3 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53918C1E1F195100F025E3 /* Tokenizer.swift */; };
+		AE53918F1E1F1B4E00F025E3 /* TokenizerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53918E1E1F1B4E00F025E3 /* TokenizerSpec.swift */; };
+		AE5391901E1F1B5300F025E3 /* Tokenizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE53918C1E1F195100F025E3 /* Tokenizer.swift */; };
 		AEA0DF9D1E1ED70500B674A7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0DF9C1E1ED70500B674A7 /* main.swift */; };
+		AEA0DFAA1E1ED93D00B674A7 /* Swift2KotlinTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0DFA91E1ED93D00B674A7 /* Swift2KotlinTests.swift */; };
+		AEA0DFB61E1ED94A00B674A7 /* Swift2KotlinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0DFB51E1ED94A00B674A7 /* Swift2KotlinUITests.swift */; };
+		AEA0DFD51E1EDB9B00B674A7 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0DFD41E1EDB9B00B674A7 /* ConsoleIO.swift */; };
+		AEA0DFD71E1EDC8800B674A7 /* Swift2Kotlin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0DFD61E1EDC8800B674A7 /* Swift2Kotlin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +38,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2ED53DAF84F79B0EE1A89DD7 /* Pods-Swift2KotlinTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift2KotlinTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift2KotlinTests/Pods-Swift2KotlinTests.release.xcconfig"; sourceTree = "<group>"; };
+		481B7CECA759C7DECD3531EC /* Pods_Swift2KotlinTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift2KotlinTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A5DB3AAB9CE99F926BEF734 /* Pods-Swift2KotlinTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift2KotlinTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift2KotlinTests/Pods-Swift2KotlinTests.debug.xcconfig"; sourceTree = "<group>"; };
+		7D05CE2E017AE1027E75B997 /* Pods-Swift2KotlinUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift2KotlinUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift2KotlinUITests/Pods-Swift2KotlinUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AE1CF2FE1E1EFFD000A29D79 /* Converter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
+		AE1CF3031E1F100C00A29D79 /* Shell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shell.swift; sourceTree = "<group>"; };
+		AE53918A1E1F191C00F025E3 /* Eval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Eval.swift; sourceTree = "<group>"; };
+		AE53918C1E1F195100F025E3 /* Tokenizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tokenizer.swift; sourceTree = "<group>"; };
+		AE53918E1E1F1B4E00F025E3 /* TokenizerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenizerSpec.swift; sourceTree = "<group>"; };
 		AEA0DF991E1ED70500B674A7 /* Swift2Kotlin */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Swift2Kotlin; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA0DF9C1E1ED70500B674A7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		AEA0DFA71E1ED93D00B674A7 /* Swift2KotlinTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift2KotlinTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA0DFA91E1ED93D00B674A7 /* Swift2KotlinTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift2KotlinTests.swift; sourceTree = "<group>"; };
+		AEA0DFAB1E1ED93D00B674A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA0DFB31E1ED94A00B674A7 /* Swift2KotlinUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swift2KotlinUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEA0DFB51E1ED94A00B674A7 /* Swift2KotlinUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swift2KotlinUITests.swift; sourceTree = "<group>"; };
+		AEA0DFB71E1ED94A00B674A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA0DFD41E1EDB9B00B674A7 /* ConsoleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
+		AEA0DFD61E1EDC8800B674A7 /* Swift2Kotlin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swift2Kotlin.swift; sourceTree = "<group>"; };
+		BEF2FBEDC7AC86304C3331BC /* Pods_Swift2KotlinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift2KotlinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9B2590F6134F67ABF3727ED /* Pods-Swift2KotlinUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift2KotlinUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift2KotlinUITests/Pods-Swift2KotlinUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,14 +69,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AEA0DFA41E1ED93D00B674A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				269E1BB58EA9BCDDFC9AC7B4 /* Pods_Swift2KotlinTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA0DFB01E1ED94A00B674A7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				906F3F917B84EA295031129E /* Pods_Swift2KotlinUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A131DADD4116C52410DF564E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A5DB3AAB9CE99F926BEF734 /* Pods-Swift2KotlinTests.debug.xcconfig */,
+				2ED53DAF84F79B0EE1A89DD7 /* Pods-Swift2KotlinTests.release.xcconfig */,
+				7D05CE2E017AE1027E75B997 /* Pods-Swift2KotlinUITests.debug.xcconfig */,
+				D9B2590F6134F67ABF3727ED /* Pods-Swift2KotlinUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AEA0DF901E1ED70500B674A7 = {
 			isa = PBXGroup;
 			children = (
 				AEA0DF9B1E1ED70500B674A7 /* Swift2Kotlin */,
+				AEA0DFA81E1ED93D00B674A7 /* Swift2KotlinTests */,
+				AEA0DFB41E1ED94A00B674A7 /* Swift2KotlinUITests */,
 				AEA0DF9A1E1ED70500B674A7 /* Products */,
+				A131DADD4116C52410DF564E /* Pods */,
+				C0050737A37F83D0F264437D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -50,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				AEA0DF991E1ED70500B674A7 /* Swift2Kotlin */,
+				AEA0DFA71E1ED93D00B674A7 /* Swift2KotlinTests.xctest */,
+				AEA0DFB31E1ED94A00B674A7 /* Swift2KotlinUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,8 +125,42 @@
 			isa = PBXGroup;
 			children = (
 				AEA0DF9C1E1ED70500B674A7 /* main.swift */,
+				AEA0DFD41E1EDB9B00B674A7 /* ConsoleIO.swift */,
+				AEA0DFD61E1EDC8800B674A7 /* Swift2Kotlin.swift */,
+				AE1CF2FE1E1EFFD000A29D79 /* Converter.swift */,
+				AE1CF3031E1F100C00A29D79 /* Shell.swift */,
+				AE53918A1E1F191C00F025E3 /* Eval.swift */,
+				AE53918C1E1F195100F025E3 /* Tokenizer.swift */,
 			);
 			path = Swift2Kotlin;
+			sourceTree = "<group>";
+		};
+		AEA0DFA81E1ED93D00B674A7 /* Swift2KotlinTests */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0DFA91E1ED93D00B674A7 /* Swift2KotlinTests.swift */,
+				AEA0DFAB1E1ED93D00B674A7 /* Info.plist */,
+				AE53918E1E1F1B4E00F025E3 /* TokenizerSpec.swift */,
+			);
+			path = Swift2KotlinTests;
+			sourceTree = "<group>";
+		};
+		AEA0DFB41E1ED94A00B674A7 /* Swift2KotlinUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AEA0DFB51E1ED94A00B674A7 /* Swift2KotlinUITests.swift */,
+				AEA0DFB71E1ED94A00B674A7 /* Info.plist */,
+			);
+			path = Swift2KotlinUITests;
+			sourceTree = "<group>";
+		};
+		C0050737A37F83D0F264437D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				481B7CECA759C7DECD3531EC /* Pods_Swift2KotlinTests.framework */,
+				BEF2FBEDC7AC86304C3331BC /* Pods_Swift2KotlinUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +183,46 @@
 			productReference = AEA0DF991E1ED70500B674A7 /* Swift2Kotlin */;
 			productType = "com.apple.product-type.tool";
 		};
+		AEA0DFA61E1ED93D00B674A7 /* Swift2KotlinTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEA0DFAC1E1ED93D00B674A7 /* Build configuration list for PBXNativeTarget "Swift2KotlinTests" */;
+			buildPhases = (
+				41CA07FB9EF3A82C0F7C91BC /* [CP] Check Pods Manifest.lock */,
+				AEA0DFA31E1ED93D00B674A7 /* Sources */,
+				AEA0DFA41E1ED93D00B674A7 /* Frameworks */,
+				AEA0DFA51E1ED93D00B674A7 /* Resources */,
+				D0DF70F5E8294F869CB45A0B /* [CP] Embed Pods Frameworks */,
+				4C41AE1A58C71F84308481D5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swift2KotlinTests;
+			productName = Swift2KotlinTests;
+			productReference = AEA0DFA71E1ED93D00B674A7 /* Swift2KotlinTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AEA0DFB21E1ED94A00B674A7 /* Swift2KotlinUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AEA0DFB81E1ED94A00B674A7 /* Build configuration list for PBXNativeTarget "Swift2KotlinUITests" */;
+			buildPhases = (
+				B24BAB9BD4D11F1A672B47CA /* [CP] Check Pods Manifest.lock */,
+				AEA0DFAF1E1ED94A00B674A7 /* Sources */,
+				AEA0DFB01E1ED94A00B674A7 /* Frameworks */,
+				AEA0DFB11E1ED94A00B674A7 /* Resources */,
+				FD13A870CD01D8708AED43D3 /* [CP] Embed Pods Frameworks */,
+				839A36B527F206B6B3B5FC8F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Swift2KotlinUITests;
+			productName = Swift2KotlinUITests;
+			productReference = AEA0DFB31E1ED94A00B674A7 /* Swift2KotlinUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +234,14 @@
 				ORGANIZATIONNAME = Pivotal;
 				TargetAttributes = {
 					AEA0DF981E1ED70500B674A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					AEA0DFA61E1ED93D00B674A7 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					AEA0DFB21E1ED94A00B674A7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
@@ -111,9 +260,121 @@
 			projectRoot = "";
 			targets = (
 				AEA0DF981E1ED70500B674A7 /* Swift2Kotlin */,
+				AEA0DFA61E1ED93D00B674A7 /* Swift2KotlinTests */,
+				AEA0DFB21E1ED94A00B674A7 /* Swift2KotlinUITests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AEA0DFA51E1ED93D00B674A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA0DFB11E1ED94A00B674A7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		41CA07FB9EF3A82C0F7C91BC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C41AE1A58C71F84308481D5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift2KotlinTests/Pods-Swift2KotlinTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		839A36B527F206B6B3B5FC8F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift2KotlinUITests/Pods-Swift2KotlinUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B24BAB9BD4D11F1A672B47CA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D0DF70F5E8294F869CB45A0B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift2KotlinTests/Pods-Swift2KotlinTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FD13A870CD01D8708AED43D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swift2KotlinUITests/Pods-Swift2KotlinUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AEA0DF951E1ED70500B674A7 /* Sources */ = {
@@ -121,6 +382,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEA0DF9D1E1ED70500B674A7 /* main.swift in Sources */,
+				AEA0DFD71E1EDC8800B674A7 /* Swift2Kotlin.swift in Sources */,
+				AE1CF3041E1F100C00A29D79 /* Shell.swift in Sources */,
+				AE1CF2FF1E1EFFD000A29D79 /* Converter.swift in Sources */,
+				AEA0DFD51E1EDB9B00B674A7 /* ConsoleIO.swift in Sources */,
+				AE53918B1E1F191C00F025E3 /* Eval.swift in Sources */,
+				AE53918D1E1F195100F025E3 /* Tokenizer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA0DFA31E1ED93D00B674A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE53918F1E1F1B4E00F025E3 /* TokenizerSpec.swift in Sources */,
+				AE5391901E1F1B5300F025E3 /* Tokenizer.swift in Sources */,
+				AE1CF3051E1F106900A29D79 /* Shell.swift in Sources */,
+				AE1CF3021E1F0FB800A29D79 /* Converter.swift in Sources */,
+				AEA0DFAA1E1ED93D00B674A7 /* Swift2KotlinTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA0DFAF1E1ED94A00B674A7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE1CF3061E1F106A00A29D79 /* Shell.swift in Sources */,
+				AEA0DFB61E1ED94A00B674A7 /* Swift2KotlinUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -231,6 +519,62 @@
 			};
 			name = Release;
 		};
+		AEA0DFAD1E1ED93D00B674A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A5DB3AAB9CE99F926BEF734 /* Pods-Swift2KotlinTests.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Swift2KotlinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.Swift2KotlinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AEA0DFAE1E1ED93D00B674A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2ED53DAF84F79B0EE1A89DD7 /* Pods-Swift2KotlinTests.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Swift2KotlinTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.Swift2KotlinTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		AEA0DFB91E1ED94A00B674A7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D05CE2E017AE1027E75B997 /* Pods-Swift2KotlinUITests.debug.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Swift2KotlinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.Swift2KotlinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		AEA0DFBA1E1ED94A00B674A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9B2590F6134F67ABF3727ED /* Pods-Swift2KotlinUITests.release.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Swift2KotlinUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pivotal.Swift2KotlinUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -250,6 +594,25 @@
 				AEA0DFA21E1ED70500B674A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEA0DFAC1E1ED93D00B674A7 /* Build configuration list for PBXNativeTarget "Swift2KotlinTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEA0DFAD1E1ED93D00B674A7 /* Debug */,
+				AEA0DFAE1E1ED93D00B674A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEA0DFB81E1ED94A00B674A7 /* Build configuration list for PBXNativeTarget "Swift2KotlinUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEA0DFB91E1ED94A00B674A7 /* Debug */,
+				AEA0DFBA1E1ED94A00B674A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

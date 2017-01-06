@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Swift2KotlinTests/TokenizerSpec.swift"
+            timestampString = "505361282.197717"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "spec()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift2KotlinTests.TokenizerSpec.(spec () -&gt; ()).(closure #1).(closure #1)"
+                  moduleName = "Swift2KotlinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pivotal/workspace/Swift2Kotlin/Swift2KotlinTests/TokenizerSpec.swift"
+                  timestampString = "505361619.655678"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "2187">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Swift2KotlinTests.TokenizerSpec.(spec () -&gt; ()).(closure #1).(closure #1).(implicit closure #4)"
+                  moduleName = "Swift2KotlinTests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pivotal/workspace/Swift2Kotlin/Swift2KotlinTests/TokenizerSpec.swift"
+                  timestampString = "505361619.657816"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "20">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

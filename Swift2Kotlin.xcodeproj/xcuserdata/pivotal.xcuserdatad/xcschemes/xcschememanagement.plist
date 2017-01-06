@@ -9,10 +9,30 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Swift2KotlinTests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Swift2KotlinUITests.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>AEA0DF981E1ED70500B674A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEA0DFA61E1ED93D00B674A7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AEA0DFB21E1ED94A00B674A7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
