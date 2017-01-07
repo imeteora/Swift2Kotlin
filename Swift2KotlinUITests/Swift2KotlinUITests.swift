@@ -27,15 +27,21 @@ class Swift2KotlinUITests: XCTestCase {
     }
     
     func testUsage() {
-        let output = Shell.run(appPath)
+        let output = Shell.runToStdout(appPath)
         let expectedOutput = ["usage:", "Swift2Kotlin -a string1 string2", "or", "Swift2Kotlin -p string", "or", "Swift2Kotlin -h to show usage information", "Type Swift2Kotlin without an option to enter interactive mode.\n"].joined(separator: "\n")
         XCTAssertEqual(output, expectedOutput)
     }
     
     func testSimpleFile() {
         let tempSource = "\(workPath)/foo.swift"
-        try! "class A { let a: Int }".write(toFile: tempSource, atomically: true, encoding: String.Encoding.utf8)
-        let output = Shell.run(appPath, tempSource)
-        XCTAssertEqual(output, "some kotlin")
+        try! "class A { let a: Int = 1 }".write(toFile: tempSource, atomically: true, encoding: String.Encoding.utf8)
+        let output = Shell.runToStdout(appPath, tempSource)
+        XCTAssertEqual(output, "class A(val a: Int) {}\n")
+    }
+    
+    func testMyself() {
+        let source = "/Users/pivotal/Swift2Kotlin/Swift2KotlinUITests/Swift2KotlinUITests.swift"
+        let output = Shell.runToStdout(appPath, source)
+        XCTAssertEqual(output, "something else\n")
     }
 }

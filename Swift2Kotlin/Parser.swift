@@ -1,11 +1,3 @@
-struct AST {
-    let type: String
-    let implicit: Bool
-    let name: String?
-    let attributes: [String:String]
-    let elements: [AST]
-}
-
 class Parser {
     func parse(_ tokens: [Token]) -> AST {
         var index = 0

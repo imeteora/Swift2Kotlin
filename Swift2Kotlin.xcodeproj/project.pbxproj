@@ -28,6 +28,12 @@
 		AEA0DFB61E1ED94A00B674A7 /* Swift2KotlinUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0DFB51E1ED94A00B674A7 /* Swift2KotlinUITests.swift */; };
 		AEA0DFD51E1EDB9B00B674A7 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0DFD41E1EDB9B00B674A7 /* ConsoleIO.swift */; };
 		AEA0DFD71E1EDC8800B674A7 /* Swift2Kotlin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA0DFD61E1EDC8800B674A7 /* Swift2Kotlin.swift */; };
+		AED979141E20260100E68967 /* GeneratorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED979131E20260100E68967 /* GeneratorSpec.swift */; };
+		AED979161E20447700E68967 /* AST.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED979151E20447700E68967 /* AST.swift */; };
+		AED979171E2046DC00E68967 /* AST.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED979151E20447700E68967 /* AST.swift */; };
+		AED979191E205BD200E68967 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED979181E205BD200E68967 /* Token.swift */; };
+		AED9791A1E205BD400E68967 /* Token.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED979181E205BD200E68967 /* Token.swift */; };
+		AED9791E1E2078AA00E68967 /* ConverterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED9791D1E2078AA00E68967 /* ConverterSpec.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +71,10 @@
 		AEA0DFB71E1ED94A00B674A7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AEA0DFD41E1EDB9B00B674A7 /* ConsoleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		AEA0DFD61E1EDC8800B674A7 /* Swift2Kotlin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swift2Kotlin.swift; sourceTree = "<group>"; };
+		AED979131E20260100E68967 /* GeneratorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratorSpec.swift; sourceTree = "<group>"; };
+		AED979151E20447700E68967 /* AST.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AST.swift; sourceTree = "<group>"; };
+		AED979181E205BD200E68967 /* Token.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Token.swift; sourceTree = "<group>"; };
+		AED9791D1E2078AA00E68967 /* ConverterSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConverterSpec.swift; sourceTree = "<group>"; };
 		BEF2FBEDC7AC86304C3331BC /* Pods_Swift2KotlinUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift2KotlinUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B2590F6134F67ABF3727ED /* Pods-Swift2KotlinUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift2KotlinUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swift2KotlinUITests/Pods-Swift2KotlinUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,6 +151,8 @@
 				AE53918C1E1F195100F025E3 /* Tokenizer.swift */,
 				A38FF7851E1F61EC00811A68 /* Parser.swift */,
 				A38FF78A1E1F7AC300811A68 /* Generator.swift */,
+				AED979151E20447700E68967 /* AST.swift */,
+				AED979181E205BD200E68967 /* Token.swift */,
 			);
 			path = Swift2Kotlin;
 			sourceTree = "<group>";
@@ -152,6 +164,8 @@
 				AEA0DFAB1E1ED93D00B674A7 /* Info.plist */,
 				AE53918E1E1F1B4E00F025E3 /* TokenizerSpec.swift */,
 				A38FF7871E1F631500811A68 /* ParserSpec.swift */,
+				AED979131E20260100E68967 /* GeneratorSpec.swift */,
+				AED9791D1E2078AA00E68967 /* ConverterSpec.swift */,
 			);
 			path = Swift2KotlinTests;
 			sourceTree = "<group>";
@@ -399,7 +413,9 @@
 				A38FF7861E1F61EC00811A68 /* Parser.swift in Sources */,
 				AEA0DFD51E1EDB9B00B674A7 /* ConsoleIO.swift in Sources */,
 				A38FF78B1E1F7AC300811A68 /* Generator.swift in Sources */,
+				AED979191E205BD200E68967 /* Token.swift in Sources */,
 				AE53918B1E1F191C00F025E3 /* Eval.swift in Sources */,
+				AED979161E20447700E68967 /* AST.swift in Sources */,
 				AE53918D1E1F195100F025E3 /* Tokenizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -409,12 +425,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE53918F1E1F1B4E00F025E3 /* TokenizerSpec.swift in Sources */,
+				AED9791E1E2078AA00E68967 /* ConverterSpec.swift in Sources */,
 				A38FF78C1E1F7AFD00811A68 /* Generator.swift in Sources */,
 				A38FF7881E1F631500811A68 /* ParserSpec.swift in Sources */,
 				AE5391901E1F1B5300F025E3 /* Tokenizer.swift in Sources */,
 				AE1CF3051E1F106900A29D79 /* Shell.swift in Sources */,
 				AE1CF3021E1F0FB800A29D79 /* Converter.swift in Sources */,
 				AEA0DFAA1E1ED93D00B674A7 /* Swift2KotlinSpec.swift in Sources */,
+				AED9791A1E205BD400E68967 /* Token.swift in Sources */,
+				AED979141E20260100E68967 /* GeneratorSpec.swift in Sources */,
+				AED979171E2046DC00E68967 /* AST.swift in Sources */,
 				A38FF7891E1F651F00811A68 /* Parser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

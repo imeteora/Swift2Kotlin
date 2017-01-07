@@ -11,10 +11,10 @@ class ParserSpec: QuickSpec {
                 expect(ast.implicit).to(beFalse())
                 expect(ast.name).to(equal("some name"))
                 expect(ast.attributes).to(haveCount(4))
-                expect(ast.attributes["type"]).to(equal("foo"))
+                expect(ast.attributes["type"]!).to(equal("foo"))
                 expect(ast.attributes["some string"]).toNot(beNil())
                 expect(ast.attributes["some other string"]).toNot(beNil())
-                expect(ast.attributes["type2"]).to(equal("bar.(file).baz"))
+                expect(ast.attributes["type2"]!).to(equal("bar.(file).baz"))
                 expect(ast.elements).to(haveCount(0))
             }
             
