@@ -40,7 +40,7 @@ class Swift2KotlinUITests: XCTestCase {
     }
     
     func testMyself() {
-        let source = "/Users/pivotal/Swift2Kotlin/Swift2KotlinUITests/Swift2KotlinUITests.swift"
+        let source = "/Users/palfvin/Swift2Kotlin/Swift2KotlinUITests/Swift2KotlinUITests.swift"
         let output = Shell.runToStdout(appPath, source)
         XCTAssertEqual(output, "something else\n")
     }

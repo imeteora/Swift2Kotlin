@@ -1,4 +1,8 @@
-class Tokenizer {
+protocol Tokenizer {
+    func tokenize(_ s: String) -> [Token]
+}
+
+class TokenizerImpl: Tokenizer {
     func tokenize(_ s: String) -> [Token] {
         var tokens = [Token]()
         let characters = s.characters.map { $0 }
@@ -46,9 +50,7 @@ class Tokenizer {
                 return result
             }
             if nextChar() == "[" {
-                _ = getChar()
-                let result = getUntil("]")
-                _ = getChar()
+                getNestedBrackets()
                 return "[]"
             }
 
@@ -64,7 +66,25 @@ class Tokenizer {
             return result
         }
         
+        func getNestedBrackets() {
+            var nesting = 1
+            _ = getChar()
+            while nesting > 0 {
+                switch getChar()! {
+                case "[":
+                    nesting += 1
+                case "]":
+                    nesting -= 1
+                default:
+                    break
+                }
+            }
+        }
+        
         while let char = skipWhiteSpace() {
+            if index == 0 && char != "(" {
+                fatalError("AST does not start with left parenthesis")
+            }
             switch char {
             case "(":
                 _ = getChar()
@@ -81,9 +101,14 @@ class Tokenizer {
                 _ = getChar()
             default:
                 let key = getUntil() { c in
-                    ["=", " ", ")", "\n", ":", "@"].index(of: c) != nil
+                    ["=", " ", "(", ")", "\n", ":", "@"].index(of: c) != nil
                 }
                 switch nextChar()! {
+                case "(":
+                    while nextChar() != ")" {
+                        _ = getChar()
+                    }
+                    _ = getChar()
                 case "@":
                     _ = getBalanced()
                 case "=":

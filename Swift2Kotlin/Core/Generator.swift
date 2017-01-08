@@ -1,4 +1,8 @@
-class Generator {
+protocol Generator {
+    func generate(_ ast: [AST]) -> String
+}
+
+class GeneratorImpl: Generator {
     
     typealias Handler = (_ ast: AST) -> String
 
@@ -12,15 +16,16 @@ class Generator {
         nodeHandlers["import_decl"] = importDecl
         nodeHandlers["pattern_binding_decl"] = nullHandler
         nodeHandlers["class_decl"] = structOrClassDecl
+        nodeHandlers["constructor_decl"] = constructor_decl
+    }
+    
+    func generate(_ asts: [AST]) -> String {
+        return asts.map { eval($0) }.joined(separator: "\n\n")
     }
     
     func eval(_ ast: AST) -> String {
         guard !ast.implicit else { return "" }
         return nodeHandlers[ast.type]!(ast)
-    }
-    
-    func generate(_ ast: AST) -> String {
-        return eval(ast)
     }
     
     func nullHandler(_ ast: AST) -> String { return "" }
@@ -34,6 +39,10 @@ class Generator {
     
     func sourceFile(_ ast: AST) -> String {
         return ast.elements.map { eval($0) }.filter { $0 != "" }.joined(separator: "\n")
+    }
+    
+    func constructor_decl(_ ast: AST) -> String {
+        return ""
     }
     
     func structOrClassDecl(_ ast: AST) -> String {

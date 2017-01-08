@@ -1,5 +1,9 @@
-class Parser {
-    func parse(_ tokens: [Token]) -> AST {
+protocol Parser {
+    func parse(_ tokens: [Token]) -> [AST]
+}
+
+class ParserImpl: Parser {
+    func parse(_ tokens: [Token]) -> [AST] {
         var index = 0
         func getToken() -> Token {
             index += 1
@@ -47,6 +51,11 @@ class Parser {
             }
         }
         
-        return innerParse()
+        var result = [AST]()
+        while index != tokens.count {
+            result.append(innerParse())
+        }
+        
+        return result
     }
 }

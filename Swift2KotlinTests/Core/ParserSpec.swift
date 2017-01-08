@@ -4,9 +4,9 @@ import Nimble
 class ParserSpec: QuickSpec {
     override func spec() {
         describe("Parser") {
-            let parser = Parser()
+            let parser = ParserImpl()
             it("parsers a simple tree correctly") {
-                let ast = parser.parse(Tokenizer().tokenize("(some_symbol \"some name\" type='foo' \"some string\" 'some other string' type2=bar.(file).baz)"))
+                let ast = parser.parse(TokenizerImpl().tokenize("(some_symbol \"some name\" type='foo' \"some string\" 'some other string' type2=bar.(file).baz)"))[0]
                 expect(ast.type).to(equal("some_symbol"))
                 expect(ast.implicit).to(beFalse())
                 expect(ast.name).to(equal("some name"))
@@ -19,7 +19,7 @@ class ParserSpec: QuickSpec {
             }
             
             it("parses nested trees") {
-                let ast = parser.parse(Tokenizer().tokenize("(some_symbol implicit (a) (b (c) (d)))"))
+                let ast = parser.parse(TokenizerImpl().tokenize("(some_symbol implicit (a) (b (c) (d)))"))[0]
                 expect(ast.type).to(equal("some_symbol"))
                 expect(ast.implicit).to(beTrue())
                 expect(ast.name).to(beNil())

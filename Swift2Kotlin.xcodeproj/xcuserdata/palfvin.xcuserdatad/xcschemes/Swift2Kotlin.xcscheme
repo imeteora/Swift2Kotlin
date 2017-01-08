@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "AEA0DFA61E1ED93D00B674A7"
+               BuildableName = "Swift2KotlinTests.xctest"
+               BlueprintName = "Swift2KotlinTests"
+               ReferencedContainer = "container:Swift2Kotlin.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
