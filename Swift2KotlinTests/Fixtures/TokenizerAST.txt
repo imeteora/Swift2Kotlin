@@ -1,0 +1,86 @@
+(source_file
+  (protocol "Tokenizer"<Self : Tokenizer> type='Tokenizer.Protocol' access=internal @_fixed_layout
+    (func_decl "tokenize(_:)" type='<Self : Tokenizer> (Self) -> (String) -> [Token]' interface type='<τ_0_0 where τ_0_0 : Tokenizer> (τ_0_0) -> (String) -> Array<Token>' access=internal
+      (parameter_list
+        (parameter "self" type='Self'))
+      (parameter_list
+        (parameter "s" type='String'))
+      (result
+        (type_array
+          (type_ident
+            (component id='Token' bind=main.(file).Token@/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Datatypes/Token.swift:1:7))))))
+  (class_decl "TokenizerImpl" type='TokenizerImpl.Type' access=internal @_fixed_layout inherits: Tokenizer
+    (func_decl "tokenize(_:)" type='(TokenizerImpl) -> (String) -> [Token]' interface type='(TokenizerImpl) -> (String) -> Array<Token>' access=internal
+      (conformance main.(file).Tokenizer.tokenize@/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:2:10)
+      (parameter_list
+        (parameter "self" type='TokenizerImpl'))
+      (parameter_list
+        (parameter "s" type='String'))
+      (result
+        (type_array
+          (type_ident
+            (component id='Token' bind=main.(file).Token@/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Datatypes/Token.swift:1:7))))
+      (brace_stmt
+        (pattern_binding_decl
+          (pattern_named type='[Token]' 'tokens')
+          (call_expr type='[Token]' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:28 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:22 - line:7:30] nothrow  arg_labels=
+            (constructor_ref_call_expr type='() -> [Token]' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:28 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:22 - line:7:28] nothrow
+              (declref_expr implicit type='(Array<Token>.Type) -> () -> [Token]' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:28 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:28 - line:7:28] decl=Swift.(file).Array.init() [with Token] function_ref=single specialized=no)
+              (type_expr type='[Token].Type' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:22 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:22 - line:7:28] typerepr='[Token]'))
+            (tuple_expr type='()' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:29 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:7:29 - line:7:30])))
+
+        (var_decl "tokens" type='[Token]' access=private storage_kind=stored)
+
+        (pattern_binding_decl
+          (pattern_named type='[String.CharacterView._Element]' 'characters')
+          (call_expr type='[String.CharacterView._Element]' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:39 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:26 - line:8:48] nothrow  arg_labels=_:
+            (dot_syntax_call_expr type='((String.CharacterView._Element) throws -> String.CharacterView._Element) throws -> [String.CharacterView._Element]' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:39 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:26 - line:8:39] nothrow
+              (declref_expr type='(String.CharacterView) -> ((String.CharacterView._Element) throws -> String.CharacterView._Element) throws -> [String.CharacterView._Element]' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:39 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:39 - line:8:39] decl=Swift.(file).Collection.map [with String.CharacterView[String.CharacterView: Collection module Swift], String.CharacterView.Index[String.CharacterView.Index: Comparable module Swift], String.CharacterView.IndexDistance[Int: SignedInteger module Swift], Int[Int: _ExpressibleByBuiltinIntegerLiteral module Swift], Int[Int: SignedNumber module Swift], Int[Int: _ExpressibleByBuiltinIntegerLiteral module Swift], Int._DisabledRangeIndex, DefaultBidirectionalIndices<String.CharacterView>[DefaultBidirectionalIndices<String.CharacterView>: specialize <String.CharacterView, String.CharacterView.Index, String.CharacterView.IndexDistance, Int, Int, Int, Int._DisabledRangeIndex, String.CharacterView, Character> (<Elements : BidirectionalIndexable> DefaultBidirectionalIndices<Elements>: IndexableBase module Swift), DefaultBidirectionalIndices<String.CharacterView>: specialize <String.CharacterView, String.CharacterView.Index, String.CharacterView.IndexDistance, Int, Int, Int, Int._DisabledRangeIndex, String.CharacterView, Character> (<Elements : BidirectionalIndexable> DefaultBidirectionalIndices<Elements>: Sequence module Swift)], String.CharacterView.Index[String.CharacterView.Index: Comparable module Swift], IndexingIterator<DefaultBidirectionalIndices<String.CharacterView>>[IndexingIterator<DefaultBidirectionalIndices<String.CharacterView>>: specialize <DefaultBidirectionalIndices<String.CharacterView>, String.CharacterView.Index, DefaultBidirectionalIndices<String.CharacterView>, String.CharacterView.Index> (<Elements : IndexableBase> IndexingIterator<Elements>: IteratorProtocol module Swift)], String.CharacterView.Index, DefaultBidirectionalIndices<String.CharacterView>, String.CharacterView.Index, String.CharacterView.Iterator[IndexingIterator<String.CharacterView>: specialize <String.CharacterView, String.CharacterView.Index, String.CharacterView, Character> (<Elements : IndexableBase> IndexingIterator<Elements>: IteratorProtocol module Swift)], String.CharacterView._Element, String.CharacterView.SubSequence[String.CharacterView: IndexableBase module Swift, String.CharacterView: Sequence module Swift], String.CharacterView.Index[String.CharacterView.Index: Comparable module Swift], String.CharacterView.Iterator[IndexingIterator<String.CharacterView>: specialize <String.CharacterView, String.CharacterView.Index, String.CharacterView, Character> (<Elements : IndexableBase> IndexingIterator<Elements>: IteratorProtocol module Swift)], Character, String.CharacterView, Character, Character, String.CharacterView._Element] function_ref=single specialized=no)
+              (member_ref_expr type='String.CharacterView' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:28 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:26 - line:8:28] decl=Swift.(file).String.characters
+                (declref_expr type='String' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:26 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:26 - line:8:26] decl=main.(file).TokenizerImpl.func decl.s@/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:6:21 function_ref=unapplied specialized=no)))
+            (paren_expr type='(String.CharacterView._Element) throws -> String.CharacterView._Element' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:43 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:43 - line:8:48] trailing-closure
+              (function_conversion_expr implicit type='(String.CharacterView._Element) throws -> String.CharacterView._Element' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:43 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:43 - line:8:48]
+                (closure_expr type='(String.CharacterView._Element) -> String.CharacterView._Element' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:43 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:43 - line:8:48] discriminator=0 single-expression
+                  (parameter_list
+                    (parameter "$0" type='(String.CharacterView._Element)'))
+                  (declref_expr type='String.CharacterView._Element' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:45 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:45 - line:8:45] decl=main.(file).TokenizerImpl.func decl.explicit closure discriminator=0.$0@/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:8:43 function_ref=unapplied specialized=no))))))
+
+        (var_decl "characters" type='[String.CharacterView._Element]' access=private let storage_kind=stored)
+
+        (pattern_binding_decl
+          (pattern_named type='Int' 'index')
+          (call_expr implicit type='Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 - line:9:21] nothrow  arg_labels=_builtinIntegerLiteral:
+            (constructor_ref_call_expr implicit type='(Int2048) -> Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 - line:9:21] nothrow
+              (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 - line:9:21] decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+              (type_expr implicit type='Int.Type' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 - line:9:21] typerepr='Int'))
+            (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 - line:9:21] names=_builtinIntegerLiteral
+              (integer_literal_expr type='Int2048' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:9:21 - line:9:21] value=0))))
+
+        (var_decl "index" type='Int' access=private storage_kind=stored)
+
+        (pattern_binding_decl
+          (pattern_named type='Int' 'line')
+          (call_expr implicit type='Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 - line:10:20] nothrow  arg_labels=_builtinIntegerLiteral:
+            (constructor_ref_call_expr implicit type='(Int2048) -> Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 - line:10:20] nothrow
+              (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 - line:10:20] decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+              (type_expr implicit type='Int.Type' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 - line:10:20] typerepr='Int'))
+            (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 - line:10:20] names=_builtinIntegerLiteral
+              (integer_literal_expr type='Int2048' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:10:20 - line:10:20] value=1))))
+
+        (var_decl "line" type='Int' access=private storage_kind=stored)
+
+        (pattern_binding_decl
+          (pattern_named type='Int' 'nesting')
+          (call_expr implicit type='Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 - line:11:23] nothrow  arg_labels=_builtinIntegerLiteral:
+            (constructor_ref_call_expr implicit type='(Int2048) -> Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 - line:11:23] nothrow
+              (declref_expr implicit type='(Int.Type) -> (Int2048) -> Int' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 - line:11:23] decl=Swift.(file).Int.init(_builtinIntegerLiteral:) function_ref=single specialized=no)
+              (type_expr implicit type='Int.Type' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 - line:11:23] typerepr='Int'))
+            (tuple_expr implicit type='(_builtinIntegerLiteral: Int2048)' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 - line:11:23] names=_builtinIntegerLiteral
+              (integer_literal_expr type='Int2048' location=/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 range=[/Users/palfvin/workspace/Swift2Kotlin/Swift2Kotlin/Core/Tokenizer.swift:11:23 - line:11:23] value=0))))
+
+        (var_decl "nesting" type='Int' access=private storage_kind=stored)
+
+        (func_decl "getChar()" type='() -> Character?' access=private captures=(index, characters, line, nesting)
+          (parameter_list)
+          (result
+)
