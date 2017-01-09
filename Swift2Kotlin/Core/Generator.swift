@@ -25,7 +25,11 @@ class GeneratorImpl: Generator {
     
     func eval(_ ast: AST) -> String {
         guard !ast.implicit else { return "" }
-        return nodeHandlers[ast.type]!(ast)
+        if let handler = nodeHandlers[ast.type] {
+            return handler(ast)
+        } else {
+            return nullHandler(ast)
+        }
     }
     
     func nullHandler(_ ast: AST) -> String { return "" }

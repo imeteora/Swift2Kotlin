@@ -3,7 +3,7 @@ import Nimble
 
 class TokenizerSpec: QuickSpec {
     override func spec() {
-        fdescribe("Tokenizer") {
+        describe("Tokenizer") {
             let tokenizer = TokenizerImpl()
             
             it("recognizes basic elements") {
@@ -56,6 +56,19 @@ class TokenizerSpec: QuickSpec {
                 let tokens = tokenizer.tokenize("(some_symbol [whatever - [whatever]])")
                 expect(tokens.count).to(equal(3))
             }
+            
+            it("handles escaped double quotes in double quoted strings") {
+                let tokens = tokenizer.tokenize("(\"some \\\" phrase\")")
+                expect(tokens.count).to(equal(3))
+                expect(tokens[1]).to(equal(Token.string("some \" phrase")))
+            }
+            
+            it("handles escaped double quotes as values in key value pairs") {
+                let tokens = tokenizer.tokenize("(foo=\"some \\\" phrase\")")
+                expect(tokens.count).to(equal(3))
+                expect(tokens[1]).to(equal(Token.keyValue("foo", "some \" phrase")))
+            }
+
         }
     }
 }

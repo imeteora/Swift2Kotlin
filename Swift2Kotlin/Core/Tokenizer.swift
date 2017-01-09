@@ -14,10 +14,16 @@ class TokenizerImpl: Tokenizer {
                 let char = characters[index]
                 if char == "\n" {
                     line += 1
-                    var i = index+1
-                    while characters[i] == " " {
-                        i = i+1
+                    var i = index
+                    while true {
+                        i += 1
+                        guard i < characters.count else {
+                            index += 1
+                            return char
+                        }
+                        if characters[i] != " " { break }
                     }
+                    
                     if characters[i] == "(" {
                         print("\(Double(i-index)/2.0-Double(nesting)):\(nesting):\(i-index):\(line)")
                     }
@@ -58,6 +64,16 @@ class TokenizerImpl: Tokenizer {
         
         func getUntilBlank() -> String { return getUntil(" ") }
         
+        func getDoubleQuotedString() -> String {
+            _ = getChar()
+            let result = getUntil { c in
+                if c == "\\" { _ = getChar() }
+                return c == "\""
+            }
+            _ = getChar()
+            return result
+        }
+        
         func getBalanced() -> String {
             if nextChar() == "'" {
                 _ = getChar()
@@ -71,10 +87,7 @@ class TokenizerImpl: Tokenizer {
             }
             
             if nextChar() == "\"" {
-                _ = getChar()
-                let result = getUntil("\"")
-                _ = getChar()
-                return result
+                return getDoubleQuotedString()
             }
             var result = ""
             while let char = nextChar() {
@@ -119,8 +132,8 @@ class TokenizerImpl: Tokenizer {
                 nesting -= 1
                 tokens.append(Token.rightParen)
             case "\"":
-                _ = getChar()
-                tokens.append(Token.string(getUntil("\""))) ; _ = getChar()
+                let result = getDoubleQuotedString()
+                tokens.append(Token.string(result))
             case "'":
                 _ = getChar()
                 tokens.append(Token.string(getUntil("'")))
