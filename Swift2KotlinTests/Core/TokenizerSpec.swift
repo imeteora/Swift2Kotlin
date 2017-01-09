@@ -3,7 +3,7 @@ import Nimble
 
 class TokenizerSpec: QuickSpec {
     override func spec() {
-        describe("Tokenizer") {
+        fdescribe("Tokenizer") {
             let tokenizer = TokenizerImpl()
             
             it("recognizes basic elements") {
@@ -39,12 +39,23 @@ class TokenizerSpec: QuickSpec {
                 expect(tokens[2]).to(equal(Token.symbol("bar")))
             }
             
-            fit("handles nested square bracket values and returns them as []") {
+            it("handles nested square bracket values (in key value pairs) and returns them as []") {
                 let tokens = tokenizer.tokenize("(some_symbol foo=[whatever - [whatever]])")
                 expect(tokens.count).to(equal(4))
                 expect(tokens[2]).to(equal(Token.keyValue("foo", "[]")))
             }
             
+            it("handles double quote values in key value pairs") {
+                let tokens = tokenizer.tokenize("(some_symbol foo=\"a string with a space\")")
+                expect(tokens.count).to(equal(4))
+                expect(tokens[2]).to(equal(Token.keyValue("foo", "a string with a space")))
+                
+            }
+            
+            it("ignores top-level netsted bracket tokens") {
+                let tokens = tokenizer.tokenize("(some_symbol [whatever - [whatever]])")
+                expect(tokens.count).to(equal(3))
+            }
         }
     }
 }

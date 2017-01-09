@@ -8,7 +8,7 @@ class ConverterSpec: QuickSpec {
             
             describe("#convertAST") {
                 fit("can process a snapshot of itself") {
-                    let text = converter.convertAST(filename: "/Users/palfvin/workspace/Swift2Kotlin/Swift2KotlinTests/prodAst.txt")
+                    let text = converter.convertAST(filename: "/Users/palfvin/workspace/Swift2Kotlin/Swift2KotlinTests/Fixtures/TokenizerAST.txt")
                     expect(text).to(equal("some kotlin"))
                 }
             }

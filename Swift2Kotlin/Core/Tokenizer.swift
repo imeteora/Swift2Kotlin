@@ -7,10 +7,26 @@ class TokenizerImpl: Tokenizer {
         var tokens = [Token]()
         let characters = s.characters.map { $0 }
         var index = 0
+        var line = 1
+        var nesting = 0
         func getChar() -> Character? {
             if index < characters.count {
+                let char = characters[index]
+                if char == "\n" {
+                    line += 1
+                    var i = index+1
+                    while characters[i] == " " {
+                        i = i+1
+                    }
+                    if characters[i] == "(" {
+                        print("\(Double(i-index)/2.0-Double(nesting)):\(nesting):\(i-index):\(line)")
+                    }
+                    if nesting == 0 {
+                        print("Back to zero at \(line)")
+                    }
+                }
                 index += 1
-                return characters[index-1]
+                return char
             } else {  return nil }
         }
         
@@ -53,7 +69,13 @@ class TokenizerImpl: Tokenizer {
                 getNestedBrackets()
                 return "[]"
             }
-
+            
+            if nextChar() == "\"" {
+                _ = getChar()
+                let result = getUntil("\"")
+                _ = getChar()
+                return result
+            }
             var result = ""
             while let char = nextChar() {
                 if char == "(" {
@@ -86,11 +108,15 @@ class TokenizerImpl: Tokenizer {
                 fatalError("AST does not start with left parenthesis")
             }
             switch char {
+            case "[":
+                getNestedBrackets()
             case "(":
                 _ = getChar()
+                nesting += 1
                 tokens.append(Token.leftParen)
             case ")":
                 _ = getChar()
+                nesting -= 1
                 tokens.append(Token.rightParen)
             case "\"":
                 _ = getChar()
